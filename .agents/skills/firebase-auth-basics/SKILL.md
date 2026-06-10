@@ -90,13 +90,5 @@ Enable other providers in the Firebase Console.
 **Web**
 See [references/client_sdk_web.md](references/client_sdk_web.md).
 
-**Flutter**
-See [references/flutter_setup.md](references/flutter_setup.md).
-**Android (Kotlin)**
-See [references/client_sdk_android.md](references/client_sdk_android.md).
 
-### 3. Security Rules
 
-Secure your data using `request.auth` in Firestore/Storage rules.
-
-See [references/security_rules.md](references/security_rules.md).

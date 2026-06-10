@@ -21,9 +21,10 @@ Follow these steps to set up the template:
    ```bash
    pnpm dev
    ```
-2. Set up Convex when prompted. Authenticate and connect an existing project or create a new project from scratch.
+2. Set up Convex when prompted. Authenticate and connect an existing project or create a new project from scratch. 
 3. Visit the [Firebase Console](https://console.firebase.com/), set up a new project, and create a Web App.
-4. Copy the Firebase environment variables into the `.env.local` file (this file is created automatically in the project root during Step 2). Refer to `.env.example` for the correct variable names.
+4. Copy the Firebase environment variables into the `.env.local` (this file is created automatically in the project root during Step 2). Refer to `.env.example` for the correct variable names.
+5. setup the `NEXT_PUBLIC_FIREBASE_PROJECT_ID` in your convex dashboard.
 5. Enable the desired authentication providers (such as Google Sign-In) under **Build > Authentication > Sign-in method** in the Firebase Console.
-6. You are all set up with Convex, Next.js, and Firebase Auth!
+6. You are all set up with Convex, Next.js, and Firebase Auth! working
 
