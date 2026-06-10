@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jobly Job — Starter Template",
+  title: "Convex NextJS Firebase Auth Template",
   description:
     "Convention-heavy starter template with Convex, Next.js, Firebase Auth, Effect-TS, and Zustand.",
   icons: {

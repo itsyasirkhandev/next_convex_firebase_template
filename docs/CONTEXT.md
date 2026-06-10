@@ -1,4 +1,4 @@
-# Project Context — Jobly Job
+# Project Context — Convex NextJS Firebase Auth Template
 
 A convention-heavy starter template for building real apps.
 
