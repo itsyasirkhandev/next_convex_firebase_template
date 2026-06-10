@@ -3,6 +3,7 @@ import { JetBrains_Mono, IBM_Plex_Sans, Playfair_Display } from "next/font/googl
 import "./globals.css";
 import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/sonner";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -46,7 +47,9 @@ export default function RootLayout({
     >
       <body className="antialiased">
         <ConvexClientProvider>{children}</ConvexClientProvider>
+        <Toaster />
       </body>
     </html>
   );
 }
+

@@ -8,6 +8,32 @@ import {
 } from "firebase/auth";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { getFirebaseAuth } from "../lib/auth";
+import { toast } from "sonner";
+import { Effect, Schema } from "effect";
+
+export class FirebaseAuthError extends Schema.TaggedErrorClass<FirebaseAuthError>()(
+  "FirebaseAuthError",
+  {
+    code: Schema.String,
+    message: Schema.String,
+    rawError: Schema.Unknown,
+  }
+) {}
+
+const signInWithGoogleEffect = Effect.tryPromise({
+  try: () => {
+    const auth = getFirebaseAuth();
+    const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    return signInWithPopup(auth, provider);
+  },
+  catch: (error) => {
+    const hasCode = typeof error === "object" && error !== null && "code" in error;
+    const code = hasCode ? String((error as { code: unknown }).code) : "auth/unknown";
+    const message = error instanceof Error ? error.message : String(error);
+    return new FirebaseAuthError({ code, message, rawError: error });
+  },
+});
 
 export default function useFirebaseAuth() {
   const [user, setUser] = useState<User | null>(null);
@@ -44,14 +70,23 @@ export default function useFirebaseAuth() {
   );
 
   const loginWithGoogle = useCallback(async () => {
-    const auth = getFirebaseAuth();
-    const provider = new GoogleAuthProvider();
-    provider.setCustomParameters({ prompt: "select_account" });
-    try {
-      await signInWithPopup(auth, provider);
-    } catch (error) {
-      console.error("Error signing in with Google popup:", error);
-    }
+    const program = signInWithGoogleEffect.pipe(
+      Effect.catchTag("FirebaseAuthError", (error) => {
+        console.error("Error signing in with Google popup:", error.rawError);
+        if (
+          error.code === "auth/configuration-not-found" ||
+          error.code.includes("configuration-not-found") ||
+          error.message.includes("configuration-not-found") ||
+          error.code === "auth/operation-not-allowed" ||
+          error.code.includes("operation-not-allowed") ||
+          error.message.includes("operation-not-allowed")
+        ) {
+          toast.error("please enable the authentification in firebase and enable the login providers");
+        }
+        return Effect.void;
+      })
+    );
+    await Effect.runPromise(program);
   }, []);
 
   const logout = useCallback(async () => {
