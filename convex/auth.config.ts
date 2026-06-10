@@ -1,8 +1,8 @@
 const authConfig = {
   providers: [
     {
-      domain: "https://securetoken.google.com/jobly-job",
-      applicationID: "jobly-job",
+      domain: "https://securetoken.google.com/nextjsconvexfirebase-template",
+      applicationID: "nextjsconvexfirebase-template",
     },
   ],
 };

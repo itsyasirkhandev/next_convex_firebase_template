@@ -42,7 +42,7 @@ function Sidebar() {
       >
         <div className="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
           <Link href="/" className="text-lg font-bold text-slate-800 dark:text-slate-200 font-heading">
-            Jobly Job
+            Nextjs Convex Firebase Template
           </Link>
           <button
             onClick={toggleSidebar}

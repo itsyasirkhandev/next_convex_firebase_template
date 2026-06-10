@@ -1,4 +1,4 @@
-# Jobly Job — Starter Template
+# Nextjs Convex Firebase Template — Starter Template
 
 Convention-heavy starter template with Next.js, Convex, Firebase Auth, Effect-TS, and Zustand.
 
