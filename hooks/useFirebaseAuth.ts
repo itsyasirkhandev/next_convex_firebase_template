@@ -31,7 +31,7 @@ const signInWithGoogleEffect = Effect.tryPromise({
   catch: (e) => {
     const error = e as { code?: unknown; message?: unknown };
     const code = error?.code ? String(error.code) : "auth/unknown";
-    const message = error?.message || String(error);
+    const message = error?.message ? String(error.message) : String(error);
     return new FirebaseAuthError({ code, message, rawError: error });
   },
 });
