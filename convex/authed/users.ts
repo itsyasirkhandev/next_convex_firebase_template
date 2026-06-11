@@ -22,7 +22,7 @@ export const getOrCreateUser = effectAuthedMutation({
 			const writerDb = db as GenericDatabaseWriter<DataModel>;
 			const tokenIdentifier = identity.tokenIdentifier;
 
-			let viewer = yield* Effect.tryPromise(() =>
+			const viewer = yield* Effect.tryPromise(() =>
 				writerDb
 					.query('users')
 					.withIndex('by_token', (q) => q.eq('tokenIdentifier', tokenIdentifier))
@@ -43,8 +43,8 @@ export const getOrCreateUser = effectAuthedMutation({
 
 				if (Object.keys(updates).length > 0) {
 					yield* Effect.tryPromise(() => writerDb.patch(viewer!._id, updates));
-					viewer = (yield* Effect.tryPromise(() => writerDb.get(viewer!._id)))!;
 				}
+				return viewer!._id;
 			} else {
 				const userId = yield* Effect.tryPromise(() =>
 					writerDb.insert('users', {
@@ -54,10 +54,8 @@ export const getOrCreateUser = effectAuthedMutation({
 						tokenIdentifier
 					})
 				);
-				viewer = (yield* Effect.tryPromise(() => writerDb.get(userId)))!;
+				return userId;
 			}
-
-			return viewer._id;
 		})
 });
 

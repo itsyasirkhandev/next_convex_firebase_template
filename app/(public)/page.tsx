@@ -93,7 +93,7 @@ export default function LandingPage() {
             {isAuthenticated ? "Open Dashboard" : "Go to Dashboard"} →
           </Link>
 
-          {!isAuthenticated && !isLoading && (
+          {!isAuthenticated && !isLoading ? (
             <button
               onClick={loginWithGoogle}
               className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition-colors duration-200 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
@@ -101,7 +101,7 @@ export default function LandingPage() {
               <GoogleLogo size={18} weight="bold" />
               Sign in with Google
             </button>
-          )}
+          ) : null}
         </div>
       </section>
 

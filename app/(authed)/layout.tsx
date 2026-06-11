@@ -27,12 +27,12 @@ function Sidebar() {
   return (
     <>
       {/* Mobile overlay */}
-      {sidebarOpen && (
+      {sidebarOpen ? (
         <div
           className="fixed inset-0 bg-black/30 z-40 lg:hidden"
           onClick={toggleSidebar}
         />
-      )}
+      ) : null}
 
       {/* Sidebar */}
       <aside
@@ -103,7 +103,7 @@ function Header() {
 
       <div className="flex items-center gap-3">
         <ThemeToggle />
-        {user && (
+        {user ? (
           <UserProfile
             viewer={{
               displayName: user.displayName,
@@ -112,7 +112,7 @@ function Header() {
             }}
             onLogout={logout}
           />
-        )}
+        ) : null}
       </div>
     </header>
   );

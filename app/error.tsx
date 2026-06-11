@@ -20,11 +20,11 @@ export default function GlobalError({
           <p className="text-sm text-slate-500 dark:text-slate-400">
             {error.message || "An unexpected error occurred. Please try again."}
           </p>
-          {error.digest && (
+          {error.digest ? (
             <p className="text-xs text-slate-400 dark:text-slate-500 mt-2 font-mono">
               Error ID: {error.digest}
             </p>
-          )}
+          ) : null}
         </div>
         <button
           onClick={reset}

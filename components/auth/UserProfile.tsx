@@ -78,7 +78,7 @@ export default function UserProfile({ viewer, onLogout }: UserProfileProps) {
         />
       </button>
 
-      {isOpen && (
+      {isOpen ? (
         <div className="absolute right-0 mt-2 w-64 origin-top-right rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-2 shadow-xl z-50 animate-in fade-in slide-in-from-top-2 duration-150">
           <div className="px-3.5 py-3 border-b border-slate-100 dark:border-slate-800/60 mb-1">
             <div className="flex items-center gap-3">
@@ -124,7 +124,7 @@ export default function UserProfile({ viewer, onLogout }: UserProfileProps) {
             <span>Sign Out</span>
           </button>
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

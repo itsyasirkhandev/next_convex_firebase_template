@@ -9,10 +9,11 @@ import {
 	customQuery
 } from 'convex-helpers/server/customFunctions';
 import { action, mutation, query } from '../_generated/server';
-import { ConvexError, ObjectType, PropertyValidators } from 'convex/values';
+import { ObjectType, PropertyValidators } from 'convex/values';
 import { Effect } from 'effect';
 import { ConvexDB } from '../services/ConvexDB';
 import { ServerConfig } from '../services/ServerConfig';
+import { runEffect } from '../effect';
 
 const apiKeyGuard = customCtxAndArgs({
 	args: { apiKey: v.string() },
@@ -31,23 +32,6 @@ export const privateQuery = customQuery(query, apiKeyGuard);
 export const privateMutation = customMutation(mutation, apiKeyGuard);
 export const privateAction = customAction(action, apiKeyGuard);
 
-export async function runPrivateEffect<Result, Error>(
-	effect: Effect.Effect<Result, Error, never>
-): Promise<Result> {
-	try {
-		return await Effect.runPromise(effect);
-	} catch (error) {
-		if (error && typeof error === 'object' && '_tag' in error) {
-			const taggedError = error as { _tag: string; [key: string]: unknown };
-			throw new ConvexError({
-				tag: taggedError._tag,
-				data: taggedError as unknown as Record<string, string | number | boolean | null>
-			});
-		}
-		throw error;
-	}
-}
-
 export const effectPrivateQuery = <Args extends PropertyValidators, R, E>(options: {
 	args: Args;
 	handler: (args: ObjectType<Args>) => Effect.Effect<R, E, ConvexDB>;
@@ -56,7 +40,7 @@ export const effectPrivateQuery = <Args extends PropertyValidators, R, E>(option
 		args: options.args,
 		// @ts-expect-error - Convex customQuery generic wrapper TS mismatch
 		handler: async (ctx, args) => {
-			return runPrivateEffect(
+			return runEffect(
 				options.handler(args as unknown as ObjectType<Args>).pipe(
 					Effect.provideService(ConvexDB, { db: ctx.db })
 				)
@@ -73,7 +57,7 @@ export const effectPrivateMutation = <Args extends PropertyValidators, R, E>(opt
 		args: options.args,
 		// @ts-expect-error - Convex customQuery generic wrapper TS mismatch
 		handler: async (ctx, args) => {
-			return runPrivateEffect(
+			return runEffect(
 				options.handler(args as unknown as ObjectType<Args>).pipe(
 					Effect.provideService(ConvexDB, { db: ctx.db })
 				)
@@ -90,7 +74,7 @@ export const effectPrivateAction = <Args extends PropertyValidators, R, E>(optio
 		args: options.args,
 		// @ts-expect-error - Convex customQuery generic wrapper TS mismatch
 		handler: async (ctx, args) => {
-			return runPrivateEffect(
+			return runEffect(
 				options.handler(args as unknown as ObjectType<Args>)
 			) as Promise<R>;
 		}
