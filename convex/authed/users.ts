@@ -11,6 +11,19 @@ import { ConvexDB } from '../services/ConvexDB';
 import { GenericDatabaseWriter } from 'convex/server';
 import { DataModel } from '../_generated/dataModel';
 
+function buildUserUpdates(
+	viewer: { name?: string; email?: string; avatarUrl?: string },
+	identity: { name?: string; email?: string; pictureUrl?: string }
+) {
+	const updates: Record<string, string | undefined> = {};
+	const name = identity.name ?? '';
+	const email = identity.email ?? '';
+	if (viewer.name !== name) updates.name = name;
+	if (viewer.email !== email) updates.email = email;
+	if (viewer.avatarUrl !== identity.pictureUrl) updates.avatarUrl = identity.pictureUrl;
+	return updates;
+}
+
 export const getOrCreateUser = effectAuthedMutation({
 	args: {},
 	handler: () =>
@@ -30,17 +43,7 @@ export const getOrCreateUser = effectAuthedMutation({
 			);
 
 			if (viewer) {
-				const updates: Record<string, string | undefined> = {};
-				if (viewer.name !== (identity.name ?? '')) {
-					updates.name = identity.name ?? '';
-				}
-				if (viewer.email !== (identity.email ?? '')) {
-					updates.email = identity.email ?? '';
-				}
-				if (viewer.avatarUrl !== identity.pictureUrl) {
-					updates.avatarUrl = identity.pictureUrl;
-				}
-
+				const updates = buildUserUpdates(viewer, identity);
 				if (Object.keys(updates).length > 0) {
 					yield* Effect.tryPromise(() => writerDb.patch(viewer!._id, updates));
 				}

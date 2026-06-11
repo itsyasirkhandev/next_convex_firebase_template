@@ -11,6 +11,7 @@ import { getFirebaseAuth } from "../lib/auth";
 import { toast } from "sonner";
 import { Effect, Schema } from "effect";
 
+/** @expected-unused */
 export class FirebaseAuthError extends Schema.TaggedErrorClass<FirebaseAuthError>()(
   "FirebaseAuthError",
   {
@@ -27,10 +28,10 @@ const signInWithGoogleEffect = Effect.tryPromise({
     provider.setCustomParameters({ prompt: "select_account" });
     return signInWithPopup(auth, provider);
   },
-  catch: (error) => {
-    const hasCode = typeof error === "object" && error !== null && "code" in error;
-    const code = hasCode ? String((error as { code: unknown }).code) : "auth/unknown";
-    const message = error instanceof Error ? error.message : String(error);
+  catch: (e) => {
+    const error = e as { code?: unknown; message?: unknown };
+    const code = error?.code ? String(error.code) : "auth/unknown";
+    const message = error?.message || String(error);
     return new FirebaseAuthError({ code, message, rawError: error });
   },
 });
@@ -73,14 +74,8 @@ export default function useFirebaseAuth() {
     const program = signInWithGoogleEffect.pipe(
       Effect.catchTag("FirebaseAuthError", (error) => {
         console.error("Error signing in with Google popup:", error.rawError);
-        if (
-          error.code === "auth/configuration-not-found" ||
-          error.code.includes("configuration-not-found") ||
-          error.message.includes("configuration-not-found") ||
-          error.code === "auth/operation-not-allowed" ||
-          error.code.includes("operation-not-allowed") ||
-          error.message.includes("operation-not-allowed")
-        ) {
+        const errStr = `${error.code} ${error.message}`.toLowerCase();
+        if (errStr.includes("configuration-not-found") || errStr.includes("operation-not-allowed")) {
           toast.error("please enable the authentification in firebase and enable the login providers");
         }
         return Effect.void;

@@ -1,0 +1,1040 @@
+{
+  "kind": "combined",
+  "schema_version": 7,
+  "version": "2.92.1",
+  "elapsed_ms": 183,
+  "_meta": {
+    "telemetry": {
+      "analysis_run_id": "run_20f6e8dd31a8462f"
+    }
+  },
+  "check": {
+    "schema_version": 7,
+    "version": "2.92.1",
+    "elapsed_ms": 120,
+    "total_issues": 0,
+    "entry_points": {
+      "total": 28,
+      "sources": {
+        "plugin": 28
+      }
+    },
+    "summary": {
+      "total_issues": 0,
+      "unused_files": 0,
+      "unused_exports": 0,
+      "unused_types": 0,
+      "private_type_leaks": 0,
+      "unused_dependencies": 0,
+      "unused_enum_members": 0,
+      "unused_class_members": 0,
+      "unresolved_imports": 0,
+      "unlisted_dependencies": 0,
+      "duplicate_exports": 0,
+      "type_only_dependencies": 0,
+      "test_only_dependencies": 0,
+      "circular_dependencies": 0,
+      "re_export_cycles": 0,
+      "boundary_violations": 0,
+      "boundary_coverage_violations": 0,
+      "boundary_call_violations": 0,
+      "policy_violations": 0,
+      "stale_suppressions": 0,
+      "unused_catalog_entries": 0,
+      "empty_catalog_groups": 0,
+      "unresolved_catalog_references": 0,
+      "unused_dependency_overrides": 0,
+      "misconfigured_dependency_overrides": 0
+    },
+    "unused_files": [],
+    "unused_exports": [],
+    "unused_types": [],
+    "private_type_leaks": [],
+    "unused_dependencies": [],
+    "unused_dev_dependencies": [],
+    "unused_optional_dependencies": [],
+    "unused_enum_members": [],
+    "unused_class_members": [],
+    "unresolved_imports": [],
+    "unlisted_dependencies": [],
+    "duplicate_exports": [],
+    "type_only_dependencies": [],
+    "test_only_dependencies": [],
+    "circular_dependencies": [],
+    "re_export_cycles": [],
+    "boundary_violations": [],
+    "boundary_coverage_violations": [],
+    "boundary_call_violations": [],
+    "policy_violations": [],
+    "stale_suppressions": [],
+    "unused_catalog_entries": [],
+    "empty_catalog_groups": [],
+    "unresolved_catalog_references": [],
+    "unused_dependency_overrides": [],
+    "misconfigured_dependency_overrides": []
+  },
+  "dupes": {
+    "clone_groups": [],
+    "clone_families": [],
+    "stats": {
+      "total_files": 32,
+      "files_with_clones": 0,
+      "total_lines": 1756,
+      "duplicated_lines": 0,
+      "total_tokens": 7080,
+      "duplicated_tokens": 0,
+      "clone_groups": 0,
+      "clone_instances": 0,
+      "duplication_percentage": 0.0
+    }
+  },
+  "health": {
+    "findings": [],
+    "summary": {
+      "files_analyzed": 43,
+      "functions_analyzed": 122,
+      "functions_above_threshold": 0,
+      "max_cyclomatic_threshold": 20,
+      "max_cognitive_threshold": 15,
+      "max_crap_threshold": 80.0,
+      "files_scored": 33,
+      "average_maintainability": 95.2,
+      "coverage_model": "static_estimated",
+      "severity_critical_count": 0,
+      "severity_high_count": 0,
+      "severity_moderate_count": 0
+    },
+    "vital_signs": {
+      "dead_file_pct": 0.0,
+      "dead_export_pct": 0.0,
+      "avg_cyclomatic": 1.6,
+      "critical_complexity_pct": 0.0,
+      "p90_cyclomatic": 3,
+      "hotspot_count": 1,
+      "hotspot_top_pct_count": 1,
+      "maintainability_avg": 95.2,
+      "maintainability_low_pct": 0.0,
+      "unused_dep_count": 0,
+      "unused_deps_per_k_files": 0.0,
+      "circular_dep_count": 0,
+      "circular_deps_per_k_files": 0.0,
+      "counts": {
+        "total_files": 43,
+        "total_exports": 62,
+        "dead_files": 0,
+        "dead_exports": 0,
+        "total_lines": 2035,
+        "files_scored": 33,
+        "total_deps": 0
+      },
+      "unit_size_profile": {
+        "low_risk": 71.3,
+        "medium_risk": 18.0,
+        "high_risk": 5.7,
+        "very_high_risk": 4.9
+      },
+      "functions_over_60_loc_per_k": 49.2,
+      "unit_interfacing_profile": {
+        "low_risk": 100.0,
+        "medium_risk": 0.0,
+        "high_risk": 0.0,
+        "very_high_risk": 0.0
+      },
+      "p95_fan_in": 3,
+      "coupling_high_pct": 0.0,
+      "total_loc": 2035
+    },
+    "file_scores": [
+      {
+        "path": "app/(authed)/dashboard/page.tsx",
+        "fan_in": 0,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.09,
+        "maintainability_index": 97.3,
+        "total_cyclomatic": 9,
+        "total_cognitive": 6,
+        "function_count": 2,
+        "lines": 99,
+        "crap_max": 72.0,
+        "crap_above_threshold": 1
+      },
+      {
+        "path": "convex/authed/users.ts",
+        "fan_in": 0,
+        "fan_out": 2,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.27,
+        "maintainability_index": 87.5,
+        "total_cyclomatic": 19,
+        "total_cognitive": 12,
+        "function_count": 9,
+        "lines": 70,
+        "crap_max": 42.0,
+        "crap_above_threshold": 1
+      },
+      {
+        "path": "components/auth/UserProfile.tsx",
+        "fan_in": 2,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.16,
+        "maintainability_index": 95.2,
+        "total_cyclomatic": 21,
+        "total_cognitive": 15,
+        "function_count": 8,
+        "lines": 132,
+        "crap_max": 37.1,
+        "crap_above_threshold": 1
+      },
+      {
+        "path": "hooks/useFirebaseAuth.ts",
+        "fan_in": 4,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.2,
+        "maintainability_index": 91.2,
+        "total_cyclomatic": 22,
+        "total_cognitive": 7,
+        "function_count": 12,
+        "lines": 108,
+        "crap_max": 30.0,
+        "crap_above_threshold": 1
+      },
+      {
+        "path": "convex/authed/numbers.ts",
+        "fan_in": 0,
+        "fan_out": 2,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.21,
+        "maintainability_index": 89.3,
+        "total_cyclomatic": 13,
+        "total_cognitive": 2,
+        "function_count": 7,
+        "lines": 61,
+        "crap_max": 20.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "components/ThemeToggle.tsx",
+        "fan_in": 2,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.22,
+        "maintainability_index": 91.2,
+        "total_cyclomatic": 10,
+        "total_cognitive": 6,
+        "function_count": 5,
+        "lines": 46,
+        "crap_max": 20.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "convex/authed/demo.ts",
+        "fan_in": 0,
+        "fan_out": 2,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.14,
+        "maintainability_index": 91.5,
+        "total_cyclomatic": 7,
+        "total_cognitive": 3,
+        "function_count": 4,
+        "lines": 49,
+        "crap_max": 20.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/(public)/page.tsx",
+        "fan_in": 0,
+        "fan_out": 2,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.04,
+        "maintainability_index": 94.4,
+        "total_cyclomatic": 5,
+        "total_cognitive": 3,
+        "function_count": 2,
+        "lines": 136,
+        "crap_max": 20.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "convex/effect.ts",
+        "fan_in": 2,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.21,
+        "maintainability_index": 97.6,
+        "total_cyclomatic": 4,
+        "total_cognitive": 3,
+        "function_count": 1,
+        "lines": 19,
+        "crap_max": 20.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/(authed)/layout.tsx",
+        "fan_in": 0,
+        "fan_out": 5,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.1,
+        "maintainability_index": 89.8,
+        "total_cyclomatic": 14,
+        "total_cognitive": 6,
+        "function_count": 8,
+        "lines": 138,
+        "crap_max": 12.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "components/providers/ConvexClientProvider.tsx",
+        "fan_in": 1,
+        "fan_out": 2,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.18,
+        "maintainability_index": 91.3,
+        "total_cyclomatic": 7,
+        "total_cognitive": 2,
+        "function_count": 5,
+        "lines": 40,
+        "crap_max": 12.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "components/auth/AuthGuard.tsx",
+        "fan_in": 1,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.04,
+        "maintainability_index": 96.0,
+        "total_cyclomatic": 3,
+        "total_cognitive": 2,
+        "function_count": 1,
+        "lines": 76,
+        "crap_max": 12.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/error.tsx",
+        "fan_in": 0,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.08,
+        "maintainability_index": 98.1,
+        "total_cyclomatic": 3,
+        "total_cognitive": 2,
+        "function_count": 1,
+        "lines": 39,
+        "crap_max": 12.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "convex/private/helpers.ts",
+        "fan_in": 1,
+        "fan_out": 3,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.1,
+        "maintainability_index": 91.5,
+        "total_cyclomatic": 8,
+        "total_cognitive": 1,
+        "function_count": 7,
+        "lines": 83,
+        "crap_max": 6.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "convex/authed/helpers.ts",
+        "fan_in": 3,
+        "fan_out": 2,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.11,
+        "maintainability_index": 92.3,
+        "total_cyclomatic": 13,
+        "total_cognitive": 1,
+        "function_count": 12,
+        "lines": 122,
+        "crap_max": 6.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "convex/private/demo.ts",
+        "fan_in": 0,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.1,
+        "maintainability_index": 94.7,
+        "total_cyclomatic": 4,
+        "total_cognitive": 1,
+        "function_count": 3,
+        "lines": 42,
+        "crap_max": 6.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "lib/services/Config.ts",
+        "fan_in": 2,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.17,
+        "maintainability_index": 94.9,
+        "total_cyclomatic": 12,
+        "total_cognitive": 1,
+        "function_count": 11,
+        "lines": 71,
+        "crap_max": 6.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "firebaseConfig.ts",
+        "fan_in": 1,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.1,
+        "maintainability_index": 96.0,
+        "total_cyclomatic": 2,
+        "total_cognitive": 1,
+        "function_count": 1,
+        "lines": 21,
+        "crap_max": 6.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "lib/auth.ts",
+        "fan_in": 1,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.07,
+        "maintainability_index": 96.1,
+        "total_cyclomatic": 2,
+        "total_cognitive": 1,
+        "function_count": 1,
+        "lines": 27,
+        "crap_max": 6.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/(authed)/dashboard/error.tsx",
+        "fan_in": 0,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.06,
+        "maintainability_index": 98.8,
+        "total_cyclomatic": 2,
+        "total_cognitive": 1,
+        "function_count": 1,
+        "lines": 32,
+        "crap_max": 6.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/layout.tsx",
+        "fan_in": 0,
+        "fan_out": 3,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.02,
+        "maintainability_index": 93.9,
+        "total_cyclomatic": 1,
+        "total_cognitive": 0,
+        "function_count": 1,
+        "lines": 54,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "store/slices/uiSlice.ts",
+        "fan_in": 1,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.16,
+        "maintainability_index": 94.8,
+        "total_cyclomatic": 4,
+        "total_cognitive": 0,
+        "function_count": 4,
+        "lines": 25,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "store/index.ts",
+        "fan_in": 3,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.11,
+        "maintainability_index": 95.4,
+        "total_cyclomatic": 3,
+        "total_cognitive": 0,
+        "function_count": 3,
+        "lines": 27,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/(authed)/dashboard/loading.tsx",
+        "fan_in": 0,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.17,
+        "maintainability_index": 96.6,
+        "total_cyclomatic": 1,
+        "total_cognitive": 0,
+        "function_count": 1,
+        "lines": 6,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/(authed)/server-demo/page.tsx",
+        "fan_in": 0,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.02,
+        "maintainability_index": 96.6,
+        "total_cyclomatic": 1,
+        "total_cognitive": 0,
+        "function_count": 1,
+        "lines": 57,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/(authed)/server-demo/inner.tsx",
+        "fan_in": 1,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.06,
+        "maintainability_index": 98.7,
+        "total_cyclomatic": 2,
+        "total_cognitive": 0,
+        "function_count": 2,
+        "lines": 36,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "convex/public/numbers.ts",
+        "fan_in": 0,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.07,
+        "maintainability_index": 98.8,
+        "total_cyclomatic": 2,
+        "total_cognitive": 0,
+        "function_count": 2,
+        "lines": 28,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "components/skeletons/DashboardSkeleton.tsx",
+        "fan_in": 1,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.03,
+        "maintainability_index": 99.3,
+        "total_cyclomatic": 1,
+        "total_cognitive": 0,
+        "function_count": 1,
+        "lines": 38,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/(public)/layout.tsx",
+        "fan_in": 0,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.08,
+        "maintainability_index": 99.4,
+        "total_cyclomatic": 1,
+        "total_cognitive": 0,
+        "function_count": 1,
+        "lines": 12,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "convex/services/ServerConfig.ts",
+        "fan_in": 1,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.06,
+        "maintainability_index": 99.4,
+        "total_cyclomatic": 1,
+        "total_cognitive": 0,
+        "function_count": 1,
+        "lines": 17,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "lib/utils.ts",
+        "fan_in": 1,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.14,
+        "maintainability_index": 99.4,
+        "total_cyclomatic": 1,
+        "total_cognitive": 0,
+        "function_count": 1,
+        "lines": 7,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "app/not-found.tsx",
+        "fan_in": 0,
+        "fan_out": 0,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.03,
+        "maintainability_index": 99.5,
+        "total_cyclomatic": 1,
+        "total_cognitive": 0,
+        "function_count": 1,
+        "lines": 29,
+        "crap_max": 2.0,
+        "crap_above_threshold": 0
+      },
+      {
+        "path": "components/auth/UserProfile.test.tsx",
+        "fan_in": 0,
+        "fan_out": 1,
+        "dead_code_ratio": 0.0,
+        "complexity_density": 0.05,
+        "maintainability_index": 96.0,
+        "total_cyclomatic": 2,
+        "total_cognitive": 0,
+        "function_count": 2,
+        "lines": 41,
+        "crap_max": 1.2,
+        "crap_above_threshold": 0
+      }
+    ],
+    "hotspots": [
+      {
+        "path": "convex/authed/users.ts",
+        "score": 75.2,
+        "commits": 6,
+        "weighted_commits": 5.84,
+        "lines_added": 189,
+        "lines_deleted": 120,
+        "complexity_density": 0.27,
+        "fan_in": 0,
+        "trend": "accelerating",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `convex/authed/users.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `convex/authed/users.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "convex/authed/numbers.ts",
+        "score": 48.4,
+        "commits": 5,
+        "weighted_commits": 4.84,
+        "lines_added": 105,
+        "lines_deleted": 45,
+        "complexity_density": 0.21,
+        "fan_in": 0,
+        "trend": "stable",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `convex/authed/numbers.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `convex/authed/numbers.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "hooks/useFirebaseAuth.ts",
+        "score": 45.3,
+        "commits": 5,
+        "weighted_commits": 4.75,
+        "lines_added": 145,
+        "lines_deleted": 32,
+        "complexity_density": 0.2,
+        "fan_in": 4,
+        "trend": "cooling",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `hooks/useFirebaseAuth.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `hooks/useFirebaseAuth.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "convex/authed/helpers.ts",
+        "score": 40.7,
+        "commits": 8,
+        "weighted_commits": 7.77,
+        "lines_added": 255,
+        "lines_deleted": 134,
+        "complexity_density": 0.11,
+        "fan_in": 3,
+        "trend": "accelerating",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `convex/authed/helpers.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `convex/authed/helpers.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "components/providers/ConvexClientProvider.tsx",
+        "score": 33.1,
+        "commits": 4,
+        "weighted_commits": 3.86,
+        "lines_added": 45,
+        "lines_deleted": 6,
+        "complexity_density": 0.18,
+        "fan_in": 1,
+        "trend": "stable",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `components/providers/ConvexClientProvider.tsx`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `components/providers/ConvexClientProvider.tsx` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "convex/authed/demo.ts",
+        "score": 25.4,
+        "commits": 4,
+        "weighted_commits": 3.81,
+        "lines_added": 81,
+        "lines_deleted": 33,
+        "complexity_density": 0.14,
+        "fan_in": 0,
+        "trend": "cooling",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `convex/authed/demo.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `convex/authed/demo.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "lib/services/Config.ts",
+        "score": 24.1,
+        "commits": 3,
+        "weighted_commits": 2.97,
+        "lines_added": 102,
+        "lines_deleted": 14,
+        "complexity_density": 0.17,
+        "fan_in": 2,
+        "trend": "accelerating",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `lib/services/Config.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `lib/services/Config.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "convex/private/helpers.ts",
+        "score": 23.4,
+        "commits": 5,
+        "weighted_commits": 4.91,
+        "lines_added": 113,
+        "lines_deleted": 31,
+        "complexity_density": 0.1,
+        "fan_in": 1,
+        "trend": "accelerating",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `convex/private/helpers.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `convex/private/helpers.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "components/auth/UserProfile.tsx",
+        "score": 22.0,
+        "commits": 3,
+        "weighted_commits": 2.88,
+        "lines_added": 154,
+        "lines_deleted": 23,
+        "complexity_density": 0.16,
+        "fan_in": 2,
+        "trend": "cooling",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `components/auth/UserProfile.tsx`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `components/auth/UserProfile.tsx` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "app/(authed)/layout.tsx",
+        "score": 18.5,
+        "commits": 4,
+        "weighted_commits": 3.88,
+        "lines_added": 143,
+        "lines_deleted": 6,
+        "complexity_density": 0.1,
+        "fan_in": 0,
+        "trend": "stable",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `app/(authed)/layout.tsx`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `app/(authed)/layout.tsx` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "convex/private/demo.ts",
+        "score": 18.2,
+        "commits": 4,
+        "weighted_commits": 3.81,
+        "lines_added": 64,
+        "lines_deleted": 23,
+        "complexity_density": 0.1,
+        "fan_in": 0,
+        "trend": "cooling",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `convex/private/demo.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `convex/private/demo.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "store/index.ts",
+        "score": 14.8,
+        "commits": 3,
+        "weighted_commits": 2.82,
+        "lines_added": 37,
+        "lines_deleted": 11,
+        "complexity_density": 0.11,
+        "fan_in": 3,
+        "trend": "accelerating",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `store/index.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `store/index.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "firebaseConfig.ts",
+        "score": 13.9,
+        "commits": 3,
+        "weighted_commits": 2.91,
+        "lines_added": 37,
+        "lines_deleted": 17,
+        "complexity_density": 0.1,
+        "fan_in": 1,
+        "trend": "accelerating",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `firebaseConfig.ts`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `firebaseConfig.ts` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "app/(public)/page.tsx",
+        "score": 5.6,
+        "commits": 3,
+        "weighted_commits": 2.94,
+        "lines_added": 139,
+        "lines_deleted": 3,
+        "complexity_density": 0.04,
+        "fan_in": 0,
+        "trend": "accelerating",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `app/(public)/page.tsx`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `app/(public)/page.tsx` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      },
+      {
+        "path": "app/layout.tsx",
+        "score": 4.6,
+        "commits": 5,
+        "weighted_commits": 4.8,
+        "lines_added": 75,
+        "lines_deleted": 20,
+        "complexity_density": 0.02,
+        "fan_in": 0,
+        "trend": "cooling",
+        "actions": [
+          {
+            "type": "refactor-file",
+            "auto_fixable": false,
+            "description": "Refactor `app/layout.tsx`, high complexity combined with frequent changes makes this a maintenance risk",
+            "note": "Prioritize extracting complex functions, adding tests, or splitting the module"
+          },
+          {
+            "type": "add-tests",
+            "auto_fixable": false,
+            "description": "Add test coverage for `app/layout.tsx` to reduce change risk",
+            "note": "Frequently changed complex files benefit most from comprehensive test coverage"
+          }
+        ]
+      }
+    ],
+    "hotspot_summary": {
+      "since": "6 months",
+      "min_commits": 3,
+      "files_analyzed": 15,
+      "files_excluded": 18,
+      "shallow_clone": false
+    },
+    "large_functions": [
+      {
+        "path": "components/auth/UserProfile.tsx",
+        "name": "UserProfile",
+        "line": 24,
+        "line_count": 107
+      },
+      {
+        "path": "app/(public)/page.tsx",
+        "name": "LandingPage",
+        "line": 37,
+        "line_count": 100
+      },
+      {
+        "path": "app/(authed)/dashboard/page.tsx",
+        "name": "DashboardPage",
+        "line": 6,
+        "line_count": 93
+      },
+      {
+        "path": "hooks/useFirebaseAuth.ts",
+        "name": "useFirebaseAuth",
+        "line": 38,
+        "line_count": 69
+      },
+      {
+        "path": "app/(authed)/layout.tsx",
+        "name": "Sidebar",
+        "line": 22,
+        "line_count": 66
+      },
+      {
+        "path": "components/auth/AuthGuard.tsx",
+        "name": "AuthGuard",
+        "line": 12,
+        "line_count": 64
+      }
+    ],
+    "target_thresholds": {
+      "fan_in_p95": 5.0,
+      "fan_in_p75": 3.0,
+      "fan_out_p95": 8.0,
+      "fan_out_p90": 5
+    }
+  }
+}

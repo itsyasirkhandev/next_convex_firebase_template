@@ -10,7 +10,7 @@ import {
 } from "@phosphor-icons/react";
 
 // Only the display fields this module actually reads — Firebase type stays outside.
-export interface ViewerDisplay {
+type ViewerDisplay = {
   displayName: string | null;
   email: string | null;
   photoURL: string | null;

@@ -6,12 +6,12 @@ export async function runEffect<Result, Error>(
 ): Promise<Result> {
 	try {
 		return await Effect.runPromise(effect);
-	} catch (error) {
-		if (error && typeof error === 'object' && '_tag' in error) {
-			const taggedError = error as { _tag: string; [key: string]: unknown };
+	} catch (e) {
+		const error = e as { _tag?: string };
+		if (error?._tag) {
 			throw new ConvexError({
-				tag: taggedError._tag,
-				data: taggedError as unknown as Record<string, string | number | boolean | null>
+				tag: String(error._tag),
+				data: error as Record<string, string | number | boolean | null>
 			});
 		}
 		throw error;
